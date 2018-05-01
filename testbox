@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+test
+</head>
+<script type="text/javascript">
+
+function calculate() {
+var el, i = 0;
+var total = 0;
+var quantity = 0;
+while(el = document.getElementsByName("chk")[i++]) {
+if(el.checked) { total= total + Number(el.value);}
+}
+//alert(total);
+var div = document.getElementById('divid');
+div.innerHTML = "Total : " +total ;
+}
+</script>
+<body>
+
+<table>
+  <tr id="header">
+    <th>Check it</th>
+    <th>Estimate item</th>
+    <th>Quantity</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="chck" value="2.99" /></td>
+    <td>1 Egg on a roll w/ bacon</td>
+    <td><input type="text" name="qnty" value="1"></td>
+    <td>$2.99</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="chck" value="3.89" /></td>
+    <td>2 Eggs on a roll w/ bacon</td>
+    <td><input type="text" name="qnty" value="1"></td>
+    <td>$3.89</td>
+  </tr>
+  <td><input type="checkbox" name="chck" value="2.25" /></td>
+    <td>Cheese Omelet</td>
+    <td><input type="text" name="qnty" value="1"></td>
+    <td>$2.25</td>
+  </tr>
+ <td><input type="checkbox" name="chck" value="4.25" /></td>
+    <td>Western Omelet</td>
+    <td><input type="text" name="qnty" value="1"></td>
+    <td>$4.25</td>
+  </tr>
+</table>
+  <p>Calculated Price: $<input type="text" name="price" id="price" disabled /></p>
+
+</body>
+</html>
